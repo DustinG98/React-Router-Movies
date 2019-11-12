@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieCard from './MovieCard';
 
+
 const MovieList = props => {
   const [movies, setMovies] = useState([])
   useEffect(() => {
@@ -18,12 +19,14 @@ const MovieList = props => {
     
     getMovies();
   }, []);
+
+
   
   return (
     <div className="movie-list">
-      {movies.map(movie => (
-          <div className="movie-card">
-            <MovieCard key={movie.id} movie={movie} />
+      {movies.map((movie, index) => (
+          <div key={movie.id} className="movie-card">
+              <MovieCard key={movie.id} thekey={movie.id} movie={movie} addToSavedList={props.addToSavedList} {...props}/>
           </div>
       ))}
     </div>
