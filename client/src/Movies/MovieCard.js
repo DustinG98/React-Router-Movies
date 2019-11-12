@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MovieCard = (props) => {
-      console.log(props)
       let currentMovie = props.movie;
 
       const saveMovie = () => {
