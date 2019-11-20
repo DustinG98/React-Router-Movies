@@ -26,7 +26,7 @@ const MovieList = props => {
     <div className="movie-list">
       {movies.map((movie, index) => (
           <div key={movie.id} className="movie-card">
-              <MovieCard key={movie.id} thekey={movie.id} movie={movie} addToSavedList={props.addToSavedList} {...props}/>
+              <MovieCard key={movie.id} movie={movie} addToSavedList={props.addToSavedList} {...props}/>
           </div>
       ))}
     </div>

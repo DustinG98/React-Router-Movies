@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const MovieCard = (props) => {
       let currentMovie = props.movie;
-
+      console.log(props)
       const saveMovie = () => {
         const addToSavedList = props.addToSavedList;
         addToSavedList(currentMovie)
@@ -12,7 +12,7 @@ const MovieCard = (props) => {
 
     return (
       <div>
-        <Link to={`/movies/${props.thekey}`}>
+        <Link to={`/movies/${currentMovie.id}`}>
         <div>
         <h2>{currentMovie.title}</h2>
         <div className="movie-director">

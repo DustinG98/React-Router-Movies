@@ -28,7 +28,7 @@ const Movie = (props) => {
 
   return (  
     <div className="movie-card">
-      <MovieCard key={props.match.params.id} thekey={props.match.params.id} movie={movie} addToSavedList={props.addToSavedList} {...props}/>
+      <MovieCard key={props.match.params.id} movie={movie} addToSavedList={props.addToSavedList} {...props}/>
     </div>
   );
 }
